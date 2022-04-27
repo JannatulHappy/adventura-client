@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   MDBCard,
   MDBCardBody,
@@ -12,31 +12,46 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
+import { googleSignIn, login } from "../redux/features/authSlice";
 import { GoogleLogin } from "react-google-login";
-import { login } from "../redux/features/authSlice";
+
+const initialState = {
+  email: "",
+  password: "",
+};
 
 const Login = () => {
-  const initialState = {
-    email: "",
-    password: "",
-  };
   const [formValue, setFormValue] = useState(initialState);
-  const { email, password } = formValue;
   const { loading, error } = useSelector((state) => ({ ...state.auth }));
+  const { email, password } = formValue;
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    error && toast.error(error);
+  }, [error]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email && password) {
       dispatch(login({ formValue, navigate, toast }));
     }
   };
-  useEffect(() => {
-    error && toast.error(error);
-  }, [error]);
   const onInputChange = (e) => {
     let { name, value } = e.target;
     setFormValue({ ...formValue, [name]: value });
+  };
+
+  const googleSuccess = (resp) => {
+    const email = resp?.profileObj?.email;
+    const name = resp?.profileObj?.name;
+    const token = resp?.tokenId;
+    const googleId = resp?.googleId;
+    const result = { email, name, token, googleId };
+    dispatch(googleSignIn({ result, navigate, toast }));
+  };
+  const googleFailure = (error) => {
+    toast.error(error);
   };
   return (
     <div
@@ -78,7 +93,7 @@ const Login = () => {
               />
             </div>
             <div className="col-12">
-            <MDBBtn style={{ width: "100%" }} className="mt-2">
+              <MDBBtn style={{ width: "100%" }} className="mt-2">
                 {loading && (
                   <MDBSpinner
                     size="sm"
@@ -91,6 +106,23 @@ const Login = () => {
               </MDBBtn>
             </div>
           </MDBValidation>
+          <br />
+          <GoogleLogin
+            clientId="435437214864-ihg79hs3em89d0m9bug2iqcs4ce308n2.apps.googleusercontent.com"
+            render={(renderProps) => (
+              <MDBBtn
+                style={{ width: "100%" }}
+                color="danger"
+                onClick={renderProps.onClick}
+                disabled={renderProps.disabled}
+              >
+                <MDBIcon className="me-2" fab icon="google" /> Google Sign In
+              </MDBBtn>
+            )}
+            onSuccess={googleSuccess}
+            onFailure={googleFailure}
+            cookiePolicy="single_host_origin"
+          />
         </MDBCardBody>
         <MDBCardFooter>
           <Link to="/register">
