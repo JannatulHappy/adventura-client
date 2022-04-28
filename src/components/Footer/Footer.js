@@ -44,14 +44,14 @@ const Footer = () => {
           <h3 className="footer-title">Quick Link</h3>
           <hr className="footer-hr" />
           <p className="footer-text">Home</p>
-          <p className="footer-text">Destinations</p>
-          <p className="footer-text">My Orders</p>
+          <p className="footer-text">All Tours</p>
+          <p className="footer-text">Dashboard</p>
           <p className="footer-text">Manage All Order</p>
-          <p className="footer-text">Add Destination</p>
+          <p className="footer-text">Add Tour</p>
           <p className="footer-text">Contact</p>
         </div>
         <div className="col-md-6 col-lg-3 col-12  ">
-          <h3 className="footer-title">Destinations</h3>
+          <h3 className="footer-title">Tours</h3>
           <hr className="footer-hr" />
           <p className="footer-text">Italian Delights</p>
           <p className="footer-text">Iceland Northern Lights Adventure</p>

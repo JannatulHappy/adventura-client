@@ -5,8 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getTours } from "../redux/features/tourSlice";
 import CardTour from "../components/CardTour";
 import Banner from "../components/Banner";
-import CustomerSupport from "../components/CustomerSupport/CustomerSupport"
-import Adventure from "../components/Adventure/Adventure"
+import CustomerSupport from "../components/CustomerSupport/CustomerSupport";
+import Adventure from "../components/Adventure/Adventure";
 import Spinner from "../components/Spinner";
 
 const Home = () => {
@@ -32,7 +32,7 @@ const Home = () => {
           style={{
             margin: "auto",
             padding: "15px",
-            maxWidth: "1000px",
+            maxWidth: "1200px",
             alignContent: "center",
           }}
         >
@@ -42,7 +42,12 @@ const Home = () => {
                 No Tours Found
               </MDBTypography>
             )}
-
+            <p className="title">FEATURED TOURS</p>
+            <hr className="hr" />
+            <p className="sub-title mt-2">
+              Discover the highlights of travelling and find ideas for your
+              holidays with these stories.
+            </p>
             <MDBCol>
               <MDBContainer>
                 <MDBRow className="row-cols-1 row-cols-md-3 g-2">

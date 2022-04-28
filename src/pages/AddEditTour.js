@@ -22,7 +22,7 @@ const initialState = {
 const AddEditTour = () => {
   const [tourData, setTourData] = useState(initialState);
   const [tagErrMsg, setTagErrMsg] = useState(null);
-  const { error,  userTours } = useSelector((state) => ({
+  const { error, loading, userTours } = useSelector((state) => ({
     ...state.tour,
   }));
   const { user } = useSelector((state) => ({ ...state.auth }));
@@ -38,7 +38,7 @@ const AddEditTour = () => {
       console.log(singleTour);
       setTourData({ ...singleTour });
     }
-  }, [id, userTours]);
+  }, [id]);
 
   useEffect(() => {
     error && toast.error(error);

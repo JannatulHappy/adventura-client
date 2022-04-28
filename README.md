@@ -8,9 +8,9 @@ This project designed with material-ui/core,mdb-react-ui-kit,.
 
 Project overview
 - A fully functional full-stack web app based on MERN
-- A travel booking site where a user can visit home page and clicking tour collection user can view of that specific tour collection.
-- User can add a new tour ,before doing this, the user must log in.user can login with email and password.
-- An user can manage a dashboard where all tour collections will be listed which the has added, user can delete and update tour collection from the dashboard,for testing purposes all users are admin
+- A travel booking site where a user can visit home page and clicking on "read more"in tour collection user can view of that specific tour collection.
+- User can add a new tour ,before doing this, the user must log in.user can login with email and password.added tour will be shown in home page and dashboard page
+- An user can manage a dashboard where all tour collections will be listed which the user has added, user can delete and update his/her tour collection from the dashboard,for testing purposes all users are admin
 
 
 Here we have used some technologies

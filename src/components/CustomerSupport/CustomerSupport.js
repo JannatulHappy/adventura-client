@@ -4,7 +4,7 @@ import supportImg from "../../assets/support-1.png";
 const CustomerSupport = () => {
   return (
     <div className="Support-container">
-      <div className="support row py-5">
+      <div className="support row py-5 ms-5" >
         <div className="col-lg-8 col-md-6 col-12">
           <p className="fw-bold fs-1 mb-4 ">24/7 Customer Support</p>
           <hr className="hr "style={{color:"gray"}} />

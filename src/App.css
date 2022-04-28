@@ -137,6 +137,21 @@ height: 570px;
     margin-top: 90px;
    
   }
+
+.title{
+    font-size:30px;
+    font-weight: bold;
+}
+.sub-title{
+    color:peru;
+    font-size: 18px;
+}
+.hr{
+    margin-left: 15px;
+    width: 90px;
+    border-bottom: 5px solid orangered;
+    color:orangered;
+}
   .avantura-btn:hover{
     background-color: white;
  
@@ -144,5 +159,7 @@ height: 570px;
     border: rgb(22, 21, 21);
    
   }
+  
+  
   /* font-family: 'Roboto', sans-serif;;
   @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
