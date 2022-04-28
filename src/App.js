@@ -11,8 +11,8 @@ import { useDispatch } from "react-redux";
 import { setUser } from "./redux/features/authSlice";
 import AddEditTour from "./pages/AddEditTour";
 import SingleTour from "./pages/SingleTour";
-// import Dashboard from "./pages/Dashboard";
-// import PrivateRoute from "./components/PrivateRoute";
+import Dashboard from "./pages/Dashboard";
+import PrivateRoute from "./components/PrivateRoute";
 // import NotFound from "./pages/NotFound";
 
 function App() {
@@ -33,29 +33,29 @@ function App() {
           <Route
             path="/addTour"
             element={
-              // <PrivateRoute>
+              <PrivateRoute>
                 <AddEditTour />
-              // </PrivateRoute>
+           </PrivateRoute>
             }
           />
           <Route
             path="/editTour/:id"
             element={
-              // <PrivateRoute>
+              <PrivateRoute>
                 <AddEditTour />
-              // </PrivateRoute>
+              </PrivateRoute>
             }
           />
           <Route path="/tour/:id" element={<SingleTour />} />
-          {/* <Route
+          <Route
             path="/dashboard"
             element={
               <PrivateRoute>
                 <Dashboard />
-              </PrivateRoute>
+               </PrivateRoute>
             }
           />
-          <Route path="*" element={<NotFound />} /> */}
+          {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </div>
     </BrowserRouter>

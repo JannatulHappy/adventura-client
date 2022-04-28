@@ -6,7 +6,7 @@ import { getTours } from "../redux/features/tourSlice";
 import CardTour from "../components/CardTour";
 import Banner from "../components/Banner";
 
-// import Spinner from "../components/Spinner";
+import Spinner from "../components/Spinner";
 
 const Home = () => {
   const { tours, loading } = useSelector((state) => ({ ...state.tour }));
@@ -14,11 +14,11 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(getTours());
-  }, []);
+  }, [dispatch]);
 
-//   if (loading) {
-//     return <Spinner />;
-//   }
+  if (loading) {
+    return <Spinner />;
+  }
   return (
     <div>
       <header>
