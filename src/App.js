@@ -14,7 +14,7 @@ import SingleTour from "./pages/SingleTour";
 import Dashboard from "./pages/Dashboard";
 import PrivateRoute from "./components/PrivateRoute";
 import NotFound from "./pages/NotFound";
-
+import Footer from "./components/Footer/Footer"
 function App() {
   const dispatch = useDispatch();
   const user = JSON.parse(localStorage.getItem("profile"));
@@ -57,6 +57,7 @@ function App() {
           />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <Footer></Footer>
       </div>
     </BrowserRouter>
   );

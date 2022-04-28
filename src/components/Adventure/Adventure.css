@@ -1,0 +1,16 @@
+.adventure-container{
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.adventure {
+    border-radius: 15px;
+    background-color: rgb(226, 238, 240);
+}
+.adventure-type{
+    border-radius: 10px;
+}
+.adventure-type img{
+    margin-top: 7px;
+border-radius: 10px;
+}

@@ -5,7 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getTours } from "../redux/features/tourSlice";
 import CardTour from "../components/CardTour";
 import Banner from "../components/Banner";
-
+import CustomerSupport from "../components/CustomerSupport/CustomerSupport"
+import Adventure from "../components/Adventure/Adventure"
 import Spinner from "../components/Spinner";
 
 const Home = () => {
@@ -55,6 +56,8 @@ const Home = () => {
           </MDBRow>
         </div>
       </div>
+      <CustomerSupport></CustomerSupport>
+      <Adventure></Adventure>
     </div>
   );
 };

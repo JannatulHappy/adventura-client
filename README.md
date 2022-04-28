@@ -10,7 +10,7 @@ Project overview
 - A fully functional full-stack web app based on MERN
 - A travel booking site where a user can visit home page and clicking tour collection user can view of that specific tour collection.
 - User can add a new tour ,before doing this, the user must log in.user can login with email and password.
-- An user can manages dashboard where all tour collection will be listed which the has added, user can delete and update tour collection from dashboard,for testing purpose all users are admin.
+- An user can manage a dashboard where all tour collections will be listed which the has added, user can delete and update tour collection from the dashboard,for testing purposes all users are admin
 
 
 Here we have used some technologies
