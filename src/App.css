@@ -9,7 +9,7 @@
 header {
   background-image: url(./assets/banner-2.jpg);
   width: 100vw;
-  height: 620px;
+  height: 570px;
   background-position:center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -51,7 +51,7 @@ header {
 .overlay{
   background-color: rgb(8, 8, 8);
 opacity: 0.68;
-height: 630px;
+height: 570px;
 }
 .banner-container{
   display: flex;
