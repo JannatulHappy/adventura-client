@@ -63,6 +63,7 @@ const Login = () => {
         marginTop: "120px",
       }}
     >
+      
       <MDBCard alignment="center">
         <MDBIcon fas icon="user-circle" className="fa-2x" />
         <h5>Sign In</h5>
@@ -111,6 +112,7 @@ const Login = () => {
             // clientId="435437214864-ihg79hs3em89d0m9bug2iqcs4ce308n2.apps.googleusercontent.com"
             render={(renderProps) => (
               <MDBBtn
+              
                 style={{ width: "100%" }}
                 color="danger"
                 onClick={renderProps.onClick}

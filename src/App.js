@@ -13,7 +13,7 @@ import AddEditTour from "./pages/AddEditTour";
 import SingleTour from "./pages/SingleTour";
 import Dashboard from "./pages/Dashboard";
 import PrivateRoute from "./components/PrivateRoute";
-// import NotFound from "./pages/NotFound";
+import NotFound from "./pages/NotFound";
 
 function App() {
   const dispatch = useDispatch();
@@ -35,7 +35,7 @@ function App() {
             element={
               <PrivateRoute>
                 <AddEditTour />
-           </PrivateRoute>
+              </PrivateRoute>
             }
           />
           <Route
@@ -52,10 +52,10 @@ function App() {
             element={
               <PrivateRoute>
                 <Dashboard />
-               </PrivateRoute>
+              </PrivateRoute>
             }
           />
-          {/* <Route path="*" element={<NotFound />} /> */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </BrowserRouter>

@@ -27,7 +27,7 @@ const Dashboard = () => {
     if (userId) {
       dispatch(getToursByUser(userId));
     }
-  }, [userId]);
+  }, [dispatch, userId]);
 
   const excerpt = (str) => {
     if (str.length > 40) {
@@ -60,10 +60,7 @@ const Dashboard = () => {
       {userTours &&
         userTours.map((item) => (
           <MDBCardGroup key={item._id}>
-            <MDBCard
-              style={{ maxWidth: "600px" }}
-              className="mt-2"
-            >
+            <MDBCard style={{ maxWidth: "600px" }} className="mt-2">
               <MDBRow className="g-0">
                 <MDBCol md="4">
                   <MDBCardImage
@@ -108,9 +105,11 @@ const Dashboard = () => {
                         />
                       </Link>
                     </div>
-                      <Link style={{fontWeight:"800",fontSize:"18px"}} to={`/tour/${item._id}`}>
-                       Details
-                      </Link>
+                    <Link to={`/tour/${item._id}`}>
+                      <button className="ms-3  avantura-btn text-uppercase">
+                        Details
+                      </button>
+                    </Link>
                   </MDBCardBody>
                 </MDBCol>
               </MDBRow>
