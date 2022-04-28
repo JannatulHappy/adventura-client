@@ -13,6 +13,7 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 import { setLogout } from "../redux/features/authSlice";
 import logoImg from "../assets/logo-1.png"
+import { Link } from "react-router-dom";
 const Header = () => {
   const [show, setShow] = useState(false);
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ const Header = () => {
   return (
     <MDBNavbar fixed="top" expand="lg" style={{ backgroundColor: "rgb(8, 8, 8)",
         opacity: 0.85,
-        padding: "34px 10px"}}>
+        padding: "34px 10px",}}>
       <MDBContainer>
         <MDBNavbarBrand
           href="/"
@@ -43,14 +44,7 @@ const Header = () => {
         </MDBNavbarToggler>
         <MDBCollapse show={show} navbar>
           <MDBNavbarNav right fullWidth={false} className="mb-2 mb-lg-0">
-            {user?.result?._id && (
-               <span
-               style={{ color: "peru", fontWeight: "900", fontSize: "17px" }}
-             >
-              {user?.result?.name}
-             </span>
-              
-            )}
+          
             <MDBNavbarItem>
               <MDBNavbarLink href="/">
                 <p className="header-text">Home</p>
@@ -70,20 +64,25 @@ const Header = () => {
                 </MDBNavbarItem>
               </>
             )}
+              {user?.result?._id && (
+               <span
+               style={{ color: "peru", fontWeight: "900", fontSize: "17px" }}
+             >
+              {user?.result?.name}
+             </span>
+              
+            )}
             {user?.result?._id ? (
-              <MDBNavbarItem>
-                <MDBNavbarLink href="/login">
-                  <p className="header-text" onClick={() => handleLogout()}>
-                    Logout
-                  </p>
-                </MDBNavbarLink>
-              </MDBNavbarItem>
-            ) : (
-              <MDBNavbarItem>
-                <MDBNavbarLink href="/login">
-                  <p className="header-text">Login</p>
-                </MDBNavbarLink>
-              </MDBNavbarItem>
+               <button
+               onClick={handleLogout}
+               className="ms-3  login-btn text-uppercase"
+             >
+               Logout
+             </button>
+           ) : (
+             <Link className="login-btn text-decoration-none ms-3" to="/login">
+               LOGIN
+             </Link>
             )}
           </MDBNavbarNav>
         </MDBCollapse>

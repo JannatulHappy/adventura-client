@@ -4,11 +4,20 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
-  box-sizing: border-box; 
- 
+  box-sizing: border-box;
+}
+header {
+  background-image: url(./assets/banner-2.jpg);
+  width: 100vw;
+  height: 620px;
+  background-position:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
  
 }
-.header-text{
+.header-text {
   color: white;
 
   font-weight: 500;
@@ -18,5 +27,122 @@
   text-transform: uppercase;
   cursor: pointer;
   padding: 5px;
+  height: 14px;
   text-decoration: none;
 }
+.login-btn {
+  color: white;
+  padding: 9px 22px;
+  font-weight: 900;
+  font-size: 16px;
+  word-spacing: 2px;
+  border: 1px solid white;
+  border-radius: 7px;
+  margin-right: 5px;
+  background-color: #553b1e;
+  opacity: 0.8;
+}
+.login-btn:hover {
+  background-color: white;
+
+  color: #1b140b;
+
+}
+.overlay{
+  background-color: rgb(8, 8, 8);
+opacity: 0.68;
+height: 630px;
+}
+.banner-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:rgb(255, 255, 255)
+}
+.banner-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.banner-left .title{
+
+  font-weight: 900;
+  font-size: 52px;
+}
+.banner-left .sub-title{
+  font-weight: 600;
+}
+.banner-left .bottom-text{
+  color:rgb(240, 230, 228)
+}
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.tag-card {
+  margin: 10px 0 0 20px;
+  color: #806a78;
+}
+
+.tourName {
+  color: "#F48FB1";
+  font-size: 18px;
+  margin: 0 0 0 4px;
+  font-weight: 500;
+}
+
+.tagErrMsg {
+  color: #f93154;
+  margin-top: 5px;
+  text-align: left;
+  font-size: 14px;
+}
+/* .btn-container{
+ 
+} */
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0px;
+}
+.btn-container{
+   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0px;
+}
+  /* button */
+  .avantura-btn {
+    background-color: rgb(24, 21, 16);
+    opacity: 0.78;
+    font-size: 19px;
+    
+    color: white;
+    border: 1px solid white;
+    font-weight: 900;
+    padding: 7px 17px;
+    text-align: left;
+    border-radius: 20px;
+    outline: 1px solid white; 
+    border: 0;
+    margin-left: 16px;
+    margin-top: 90px;
+   
+  }
+  .avantura-btn:hover{
+    background-color: white;
+ 
+    color: rgb(19, 17, 12);
+    border: rgb(22, 21, 21);
+   
+  }
+  /* font-family: 'Roboto', sans-serif;;
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */

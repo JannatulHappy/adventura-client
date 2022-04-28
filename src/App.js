@@ -9,14 +9,14 @@ import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { setUser } from "./redux/features/authSlice";
 import Header from "./components/Header";
+import AddEditTour from "./pages/AddEditTour";
 function App() {
   const dispatch = useDispatch();
   const user = JSON.parse(localStorage.getItem("profile"));
   useEffect(() => {
     dispatch(setUser(user));
-  }, [ dispatch,user]);
+  }, [dispatch, user]);
   return (
-    
     <BrowserRouter>
       <div className="App">
         <Header></Header>
@@ -25,6 +25,8 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/register" element={<Register />}></Route>
+          <Route path="/addTour" element={<AddEditTour />}></Route>
+          <Route path="/editTour/:id" element={<AddEditTour />}></Route>
         </Routes>
       </div>
     </BrowserRouter>
